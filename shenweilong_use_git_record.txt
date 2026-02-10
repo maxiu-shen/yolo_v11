@@ -1,0 +1,37 @@
+推送小文件
+git init 									在当前目录创建Git可管理的仓库（本地仓库），创建.git文件夹,从此以后该文件夹叫做工作区
+git remote add origin <远程仓库地址>		将本地仓库与远程仓库（如GitHub上的仓库）建立连接
+git remote set-url origin <远程仓库地址>	远程地址切换为HTTPS格式
+git add <file>							将工作区的新文件文件/修改过的文件添加到暂存区
+git status								查看有哪些文件在暂存区
+git ls-files								列出暂存区中所有文件的路径
+git reset HEAD <file>						将文件从暂存区移回工作区，文件本身内容不变，仅取消暂存状态
+git reset									将所有文件从暂存区移回工作区，文件本身内容不变，仅取消暂存状态
+git commit -m "提交说明"					将暂存区的文件快照永久记录到本地仓库，并附上描述性信息
+git log									查看commit历史记录
+git reset --soft <commit_id>				回退到某次提交，所有更改都回到了暂存区
+git reset --mixed <commit_id>			回退到某次提交，且更改退回到了工作区，需要重新 git add。
+git branch								检查本地分支
+git push -u origin main					将本地main分支的提交记录推送到远程仓库，-u用于首次推送时建立分支关联
+
+推送大文件（如果已经commit）
+Git LFS 是一种扩展工具，它允许您将大文件（如模型权重、视频、数据集等）存储在远程服务器上，而在 Git 仓库中仅保留文本指针，从而绕过大小限制。
+
+git lfs install										设置 Git LFS
+git lfs track "*.pt"									指定要由 Git LFS 跟踪的文件类型，这里假设大文件是.pt类型的文件
+git add .gitattributes								此命令会生成或更新 .gitattributes文件，并确保将该文件添加到 Git 跟踪
+git lfs migrate import --everything --include="*.pt"	将现有文件转换为 LFS 跟踪。这会重写提交历史，将大文件（这里是.pt文件）替换为指针。
+git push --force origin main						需要使用 --force推送（强制推送）
+git lfs ls-files										列出所有被 LFS 跟踪的文件
+
+
+推送大文件（如果还没有add）
+如果已经add，但是没有commit，可以先使用git reset将暂存区清空
+
+git lfs install										设置 Git LFS
+git lfs track "*.pt"									指定要由 Git LFS 跟踪的文件类型，这里假设大文件是.pt类型的文件
+git add .gitattributes								此命令会生成或更新 .gitattributes文件，并确保将该文件添加到 Git 跟踪
+git add <file>									将工作区的新文件文件/修改过的文件添加到暂存区，当add  .pt文件时，Git 会自动通过 LFS 来处理它们
+git commit -m "提交说明"							将暂存区的文件快照永久记录到本地仓库，并附上描述性信息
+git push -u origin main							将本地main分支的提交记录推送到远程仓库，-u用于首次推送时建立分支关联
+git lfs ls-files										列出所有被 LFS 跟踪的文件
