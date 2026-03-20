@@ -1,0 +1,41 @@
+{
+  "model_name": "yolov11n",
+  "dataset": "BDD100K",
+  "quant_method": "PTQ",
+  "input_size": [640, 640],
+  "global_notes": "Fill all fields with actual exported values. Keep layer order identical to params.h.",
+  "layers": [
+    {
+      "layer_name": "backbone.conv0",
+      "layer_type": "Conv2d",
+      "tensor_layout": "NCHW",
+      "quant_granularity": "per_tensor",
+      "input": {
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0
+      },
+      "weight": {
+        "dtype": "int8",
+        "scale": [0.0],
+        "zero_point": [0],
+        "per_channel_axis": 0
+      },
+      "bias": {
+        "dtype": "int32",
+        "scale": [0.0]
+      },
+      "output": {
+        "dtype": "int8",
+        "scale": 0.0,
+        "zero_point": 0,
+        "requant_scale": 0.0
+      },
+      "gemmini_mapping": {
+        "expected_backend": "gemmini",
+        "operator_class": "standard_conv"
+      },
+      "notes": "Record any special handling here."
+    }
+  ]
+}
