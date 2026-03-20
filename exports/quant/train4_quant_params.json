@@ -27,7 +27,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_0",
       "group": 1,
       "kernel_shape": [
@@ -163,7 +164,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_1",
       "group": 1,
       "kernel_shape": [
@@ -379,7 +381,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.2/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_2",
       "group": 1,
       "kernel_shape": [
@@ -595,7 +598,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.2/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_3",
       "group": 1,
       "kernel_shape": [
@@ -691,7 +695,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.2/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_4",
       "group": 1,
       "kernel_shape": [
@@ -827,7 +832,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.2/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_5",
       "group": 1,
       "kernel_shape": [
@@ -1203,7 +1209,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.3/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_6",
       "group": 1,
       "kernel_shape": [
@@ -1579,7 +1586,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.4/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_7",
       "group": 1,
       "kernel_shape": [
@@ -1955,7 +1963,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.4/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_8",
       "group": 1,
       "kernel_shape": [
@@ -2091,7 +2100,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.4/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_9",
       "group": 1,
       "kernel_shape": [
@@ -2307,7 +2317,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.4/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_10",
       "group": 1,
       "kernel_shape": [
@@ -3003,7 +3014,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.5/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_11",
       "group": 1,
       "kernel_shape": [
@@ -3699,7 +3711,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_12",
       "group": 1,
       "kernel_shape": [
@@ -4395,7 +4408,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_13",
       "group": 1,
       "kernel_shape": [
@@ -4611,7 +4625,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_14",
       "group": 1,
       "kernel_shape": [
@@ -4827,7 +4842,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/m/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_15",
       "group": 1,
       "kernel_shape": [
@@ -5043,7 +5059,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/m/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_16",
       "group": 1,
       "kernel_shape": [
@@ -5259,7 +5276,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/m/m.1/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_17",
       "group": 1,
       "kernel_shape": [
@@ -5475,7 +5493,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/m/m.1/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_18",
       "group": 1,
       "kernel_shape": [
@@ -5691,7 +5710,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/m.0/cv3/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_19",
       "group": 1,
       "kernel_shape": [
@@ -6067,7 +6087,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.6/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_20",
       "group": 1,
       "kernel_shape": [
@@ -6763,7 +6784,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.7/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_21",
       "group": 1,
       "kernel_shape": [
@@ -8099,7 +8121,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_22",
       "group": 1,
       "kernel_shape": [
@@ -9435,7 +9458,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_23",
       "group": 1,
       "kernel_shape": [
@@ -9811,7 +9835,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_24",
       "group": 1,
       "kernel_shape": [
@@ -10187,7 +10212,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/m/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_25",
       "group": 1,
       "kernel_shape": [
@@ -10563,7 +10589,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/m/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_26",
       "group": 1,
       "kernel_shape": [
@@ -10939,7 +10966,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/m/m.1/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_27",
       "group": 1,
       "kernel_shape": [
@@ -11315,7 +11343,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/m/m.1/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_28",
       "group": 1,
       "kernel_shape": [
@@ -11691,7 +11720,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/m.0/cv3/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_29",
       "group": 1,
       "kernel_shape": [
@@ -12387,7 +12417,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.8/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_30",
       "group": 1,
       "kernel_shape": [
@@ -13723,7 +13754,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.9/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_31",
       "group": 1,
       "kernel_shape": [
@@ -14419,7 +14451,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.9/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_32",
       "group": 1,
       "kernel_shape": [
@@ -15755,7 +15788,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_33",
       "group": 1,
       "kernel_shape": [
@@ -17091,7 +17125,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/qkv/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_34",
       "group": 1,
       "kernel_shape": [
@@ -18427,7 +18462,8 @@
     {
       "layer_type": "MatMul",
       "node_name": "/model.10/m/m.0/attn/MatMul",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "matmul_0",
       "quantized": true,
       "quant_granularity": {
@@ -18458,7 +18494,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/pe/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_35",
       "group": 128,
       "kernel_shape": [
@@ -19154,7 +19191,8 @@
     {
       "layer_type": "MatMul",
       "node_name": "/model.10/m/m.0/attn/MatMul_1",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "matmul_1",
       "quantized": true,
       "quant_granularity": {
@@ -19185,7 +19223,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/proj/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_36",
       "group": 1,
       "kernel_shape": [
@@ -19881,7 +19920,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/m/m.0/ffn/ffn.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_37",
       "group": 1,
       "kernel_shape": [
@@ -21217,7 +21257,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/m/m.0/ffn/ffn.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_38",
       "group": 1,
       "kernel_shape": [
@@ -21913,7 +21954,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.10/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_39",
       "group": 1,
       "kernel_shape": [
@@ -23249,7 +23291,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.13/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_40",
       "group": 1,
       "kernel_shape": [
@@ -23945,7 +23988,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.13/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_41",
       "group": 1,
       "kernel_shape": [
@@ -24161,7 +24205,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.13/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_42",
       "group": 1,
       "kernel_shape": [
@@ -24537,7 +24582,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.13/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_43",
       "group": 1,
       "kernel_shape": [
@@ -25233,7 +25279,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.16/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_44",
       "group": 1,
       "kernel_shape": [
@@ -25609,7 +25656,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.16/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_45",
       "group": 1,
       "kernel_shape": [
@@ -25745,7 +25793,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.16/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_46",
       "group": 1,
       "kernel_shape": [
@@ -25961,7 +26010,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.16/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_47",
       "group": 1,
       "kernel_shape": [
@@ -26337,7 +26387,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.17/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_48",
       "group": 1,
       "kernel_shape": [
@@ -26713,7 +26764,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_49",
       "group": 1,
       "kernel_shape": [
@@ -26759,7 +26811,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.0/cv3.0.0.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_50",
       "group": 64,
       "kernel_shape": [
@@ -26805,7 +26858,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_51",
       "group": 1,
       "kernel_shape": [
@@ -26851,7 +26905,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.0/cv3.0.0.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_52",
       "group": 1,
       "kernel_shape": [
@@ -26897,7 +26952,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_53",
       "group": 1,
       "kernel_shape": [
@@ -26943,7 +26999,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.1/cv3.0.1.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_54",
       "group": 64,
       "kernel_shape": [
@@ -26989,7 +27046,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.1/cv3.0.1.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_55",
       "group": 1,
       "kernel_shape": [
@@ -27035,7 +27093,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.19/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_56",
       "group": 1,
       "kernel_shape": [
@@ -27731,7 +27790,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_57",
       "group": 1,
       "kernel_shape": [
@@ -27777,7 +27837,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.19/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_58",
       "group": 1,
       "kernel_shape": [
@@ -27993,7 +28054,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.19/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_59",
       "group": 1,
       "kernel_shape": [
@@ -28369,7 +28431,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.19/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_60",
       "group": 1,
       "kernel_shape": [
@@ -29065,7 +29128,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.20/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_61",
       "group": 1,
       "kernel_shape": [
@@ -29761,7 +29825,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_62",
       "group": 1,
       "kernel_shape": [
@@ -29807,7 +29872,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.0/cv3.1.0.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_63",
       "group": 128,
       "kernel_shape": [
@@ -29853,7 +29919,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_64",
       "group": 1,
       "kernel_shape": [
@@ -29899,7 +29966,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.0/cv3.1.0.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_65",
       "group": 1,
       "kernel_shape": [
@@ -29945,7 +30013,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_66",
       "group": 1,
       "kernel_shape": [
@@ -29991,7 +30060,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.1/cv3.1.1.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_67",
       "group": 64,
       "kernel_shape": [
@@ -30037,7 +30107,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.1/cv3.1.1.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_68",
       "group": 1,
       "kernel_shape": [
@@ -30083,7 +30154,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_69",
       "group": 1,
       "kernel_shape": [
@@ -31419,7 +31491,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_70",
       "group": 1,
       "kernel_shape": [
@@ -31465,7 +31538,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_71",
       "group": 1,
       "kernel_shape": [
@@ -31841,7 +31915,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_72",
       "group": 1,
       "kernel_shape": [
@@ -32217,7 +32292,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/m/m.0/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_73",
       "group": 1,
       "kernel_shape": [
@@ -32593,7 +32669,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/m/m.0/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_74",
       "group": 1,
       "kernel_shape": [
@@ -32969,7 +33046,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/m/m.1/cv1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_75",
       "group": 1,
       "kernel_shape": [
@@ -33345,7 +33423,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/m/m.1/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_76",
       "group": 1,
       "kernel_shape": [
@@ -33721,7 +33800,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/m.0/cv3/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_77",
       "group": 1,
       "kernel_shape": [
@@ -34417,7 +34497,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.22/cv2/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_78",
       "group": 1,
       "kernel_shape": [
@@ -35753,7 +35834,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_79",
       "group": 1,
       "kernel_shape": [
@@ -35799,7 +35881,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.0/cv3.2.0.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_80",
       "group": 256,
       "kernel_shape": [
@@ -35845,7 +35928,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_81",
       "group": 1,
       "kernel_shape": [
@@ -35891,7 +35975,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.0/cv3.2.0.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_82",
       "group": 1,
       "kernel_shape": [
@@ -35937,7 +36022,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_83",
       "group": 1,
       "kernel_shape": [
@@ -35983,7 +36069,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.1/cv3.2.1.0/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_84",
       "group": 64,
       "kernel_shape": [
@@ -36029,7 +36116,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.1/cv3.2.1.1/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_85",
       "group": 1,
       "kernel_shape": [
@@ -36075,7 +36163,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.2/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_86",
       "group": 1,
       "kernel_shape": [
@@ -36121,7 +36210,8 @@
     {
       "layer_type": "Conv",
       "node_name": "/model.23/dfl/conv/Conv",
-      "tensor_layout": "NCHW",
+      "activation_layout": "NHWC",
+      "weight_layout": "NHWC (see train4_layer_params.json for per-layer details)",
       "layer_name": "conv_87",
       "group": 1,
       "kernel_shape": [

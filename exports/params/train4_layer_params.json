@@ -2,12 +2,26 @@
   "model": "yolov11n",
   "dataset": "BDD100K",
   "num_classes": 10,
-  "input_shape": [
+  "input_shape_nchw": [
     1,
     3,
     640,
     640
   ],
+  "input_shape_nhwc": [
+    1,
+    640,
+    640,
+    3
+  ],
+  "weight_layout": "NHWC (Gemmini native)",
+  "layout_conversion": {
+    "standard_conv": "OIHW [OC,IC,kH,kW] -> HWIO [kH*kW*IC, OC]",
+    "1x1_conv": "OIHW [OC,IC,1,1] -> IO [IC, OC]",
+    "dw_conv": "[C,1,kH,kW] -> [C,kH,kW]",
+    "matmul": "unchanged",
+    "bias": "[OC] unchanged"
+  },
   "total_layers": 90,
   "quantized_layers": 65,
   "fp32_layers": 25,
@@ -18,12 +32,17 @@
       "op_type": "Conv",
       "node_name": "/model.0/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         16,
         3,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        27,
+        16
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -91,12 +110,17 @@
       "op_type": "Conv",
       "node_name": "/model.1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         16,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        144,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -196,12 +220,17 @@
       "op_type": "Conv",
       "node_name": "/model.2/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         32,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        32,
+        32
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -301,12 +330,17 @@
       "op_type": "Conv",
       "node_name": "/model.2/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         8,
         16,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        144,
+        8
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -358,12 +392,17 @@
       "op_type": "Conv",
       "node_name": "/model.2/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         16,
         8,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        72,
+        16
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -431,12 +470,17 @@
       "op_type": "Conv",
       "node_name": "/model.2/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         48,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        48,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -600,12 +644,17 @@
       "op_type": "Conv",
       "node_name": "/model.3/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -769,12 +818,17 @@
       "op_type": "Conv",
       "node_name": "/model.4/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -938,12 +992,17 @@
       "op_type": "Conv",
       "node_name": "/model.4/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         16,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        16
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -1011,12 +1070,17 @@
       "op_type": "Conv",
       "node_name": "/model.4/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         16,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        144,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -1116,12 +1180,17 @@
       "op_type": "Conv",
       "node_name": "/model.4/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         96,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        96,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -1413,12 +1482,17 @@
       "op_type": "Conv",
       "node_name": "/model.5/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        1152,
+        128
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -1710,12 +1784,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -2007,12 +2086,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        32
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -2112,12 +2196,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        32
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -2217,12 +2306,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/m/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -2322,12 +2416,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/m/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -2427,12 +2526,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/m/m.1/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -2532,12 +2636,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/m/m.1/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -2637,12 +2746,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/m.0/cv3/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -2806,12 +2920,17 @@
       "op_type": "Conv",
       "node_name": "/model.6/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         192,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        192,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -3103,12 +3222,17 @@
       "op_type": "Conv",
       "node_name": "/model.7/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         128,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        1152,
+        256
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -3656,12 +3780,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -4209,12 +4338,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -4378,12 +4512,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -4547,12 +4686,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/m/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -4716,12 +4860,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/m/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -4885,12 +5034,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/m/m.1/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -5054,12 +5208,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/m/m.1/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -5223,12 +5382,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/m.0/cv3/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -5520,12 +5684,17 @@
       "op_type": "Conv",
       "node_name": "/model.8/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         384,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        384,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -6073,12 +6242,17 @@
       "op_type": "Conv",
       "node_name": "/model.9/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -6370,12 +6544,17 @@
       "op_type": "Conv",
       "node_name": "/model.9/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         512,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        512,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -6923,12 +7102,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -7476,12 +7660,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/qkv/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -8029,7 +8218,9 @@
       "op_type": "MatMul",
       "node_name": "/model.10/m/m.0/attn/MatMul",
       "quantized": true,
-      "weight_shape": null,
+      "weight_shape_oihw": null,
+      "weight_shape_nhwc": null,
+      "weight_layout": null,
       "weight_per_channel": false,
       "input_scale": 0.09128069877624512,
       "input_zp": 0,
@@ -8043,12 +8234,18 @@
       "op_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/pe/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        128,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -8340,7 +8537,9 @@
       "op_type": "MatMul",
       "node_name": "/model.10/m/m.0/attn/MatMul_1",
       "quantized": true,
-      "weight_shape": null,
+      "weight_shape_oihw": null,
+      "weight_shape_nhwc": null,
+      "weight_layout": null,
       "weight_per_channel": false,
       "input_scale": 0.09128069877624512,
       "input_zp": 0,
@@ -8354,12 +8553,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/m/m.0/attn/proj/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -8651,12 +8855,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/m/m.0/ffn/ffn.0/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -9204,12 +9413,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/m/m.0/ffn/ffn.1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -9501,12 +9715,17 @@
       "op_type": "Conv",
       "node_name": "/model.10/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -10054,12 +10273,17 @@
       "op_type": "Conv",
       "node_name": "/model.13/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         384,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        384,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -10351,12 +10575,17 @@
       "op_type": "Conv",
       "node_name": "/model.13/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -10456,12 +10685,17 @@
       "op_type": "Conv",
       "node_name": "/model.13/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -10625,12 +10859,17 @@
       "op_type": "Conv",
       "node_name": "/model.13/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         192,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        192,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -10922,12 +11161,17 @@
       "op_type": "Conv",
       "node_name": "/model.16/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -11091,12 +11335,17 @@
       "op_type": "Conv",
       "node_name": "/model.16/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         16,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        16
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -11164,12 +11413,17 @@
       "op_type": "Conv",
       "node_name": "/model.16/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         16,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        144,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -11269,12 +11523,17 @@
       "op_type": "Conv",
       "node_name": "/model.16/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         96,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        96,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -11438,12 +11697,17 @@
       "op_type": "Conv",
       "node_name": "/model.17/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -11607,12 +11871,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -11637,12 +11906,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.0/cv3.0.0.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        64,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -11667,12 +11942,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -11697,12 +11977,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.0/cv3.0.0.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -11727,12 +12012,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.0/cv2.0.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -11757,12 +12047,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.1/cv3.0.1.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        64,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -11787,12 +12083,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.1/cv3.0.1.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -11817,12 +12118,17 @@
       "op_type": "Conv",
       "node_name": "/model.19/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         192,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        192,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -12114,12 +12420,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.0/cv3.0.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         10,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        10
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -12144,12 +12455,17 @@
       "op_type": "Conv",
       "node_name": "/model.19/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         32,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        32
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -12249,12 +12565,17 @@
       "op_type": "Conv",
       "node_name": "/model.19/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         32,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        288,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -12418,12 +12739,17 @@
       "op_type": "Conv",
       "node_name": "/model.19/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         192,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        192,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -12715,12 +13041,17 @@
       "op_type": "Conv",
       "node_name": "/model.20/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        1152,
+        128
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -13012,12 +13343,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        1152,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -13042,12 +13378,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.0/cv3.1.0.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        128,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -13072,12 +13414,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -13102,12 +13449,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.0/cv3.1.0.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13132,12 +13484,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.1/cv2.1.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13162,12 +13519,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.1/cv3.1.1.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        64,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -13192,12 +13555,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.1/cv3.1.1.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13222,12 +13590,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         384,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        384,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13775,12 +14148,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.1/cv3.1.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         10,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        10
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13805,12 +14183,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -13974,12 +14357,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -14143,12 +14531,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/m/m.0/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -14312,12 +14705,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/m/m.0/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -14481,12 +14879,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/m/m.1/cv1/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -14650,12 +15053,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/m/m.1/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -14819,12 +15227,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/m.0/cv3/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         128,
         128,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        128,
+        128
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15116,12 +15529,17 @@
       "op_type": "Conv",
       "node_name": "/model.22/cv2/conv/Conv",
       "quantized": true,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         384,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        384,
+        256
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15669,12 +16087,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         256,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        2304,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -15699,12 +16122,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.0/cv3.2.0.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         256,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        256,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -15729,12 +16158,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        576,
+        64
+      ],
+      "weight_layout": "hwio",
       "kernel_shape": [
         3,
         3
@@ -15759,12 +16193,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.0/cv3.2.0.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         256,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        256,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15789,12 +16228,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv2.2/cv2.2.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15819,12 +16263,18 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.1/cv3.2.1.0/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         1,
         3,
         3
       ],
+      "weight_shape_nhwc": [
+        64,
+        3,
+        3
+      ],
+      "weight_layout": "dw_chw",
       "kernel_shape": [
         3,
         3
@@ -15849,12 +16299,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.1/cv3.2.1.1/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         64,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        64
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15879,12 +16334,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/cv3.2/cv3.2.2/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         10,
         64,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        64,
+        10
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
@@ -15909,12 +16369,17 @@
       "op_type": "Conv",
       "node_name": "/model.23/dfl/conv/Conv",
       "quantized": false,
-      "weight_shape": [
+      "weight_shape_oihw": [
         1,
         16,
         1,
         1
       ],
+      "weight_shape_nhwc": [
+        16,
+        1
+      ],
+      "weight_layout": "1x1_io",
       "kernel_shape": [
         1,
         1
