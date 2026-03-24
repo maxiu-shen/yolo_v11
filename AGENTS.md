@@ -64,7 +64,7 @@ yolo_v11/
 │  └─ templates/
 ├─ tools/
 ├─ experiments/
-├─ docs/
+├─ shen_docs/
 └─ logs/
 ```
 
@@ -78,13 +78,13 @@ yolo_v11/
 - `exports/templates/`：统一存放量化参数、结构摘要、预处理/后处理、交付树等模板文件
 - `tools/`：自写导出脚本、量化脚本、检查脚本
 - `experiments/`：探索性实验和临时方案
-- `docs/`：工作记录与说明文档
+- `shen_docs/`：工作记录与说明文档（所有记录与说明类文档统一放入此目录）
 - `yolo_v11_doc/`：本地补充参考目录；若其中包含官方 `YOLOv11` 指导资料、示例说明或标注参考文件，应优先作为本工作区的辅助参考来源
 
 ## 🛠 修改边界
 - `tools/`
 - `experiments/`
-- `docs/`
+- `shen_docs/`
 - `exports/`
 - `ultralytics/cfg/datasets/*.yaml`
 - 数据准备脚本
@@ -99,6 +99,7 @@ yolo_v11/
 - 若需要调整数据集路径、类别映射或 split 定义，优先在 `ultralytics/cfg/datasets/*.yaml` 中做局部、可追溯修改
 - 根目录历史脚本允许维护，但新增脚本原则上优先放入 `tools/`
 - 若必须修改 `ultralytics/`，必须做到局部、可追溯、可说明原因
+- 回答和书写相关文档需要使用中文，专业名词可以使用英文
 
 ## 📚 本地参考资料使用规则
 - 若 `yolo_v11_doc/` 中存在官方 `YOLOv11` 指导文件、导出说明、训练建议或标注示例，执行相关任务前应先参考这些资料
@@ -123,7 +124,7 @@ yolo task=detect mode=val model=runs/detect/train3/weights/best.pt data=ultralyt
 ### 推理
 ```powershell
 conda activate yolo_v11
-yolo task=detect mode=predict model=runs/detect/train3/weights/best.pt source=VOCdevkit/JPEGImages device=0 conf=0.25 save=True
+yolo task=detect mode=predict model=runs/detect/train3/weights/best.pt source=datasets/VOCdevkit/JPEGImages device=0 conf=0.25 save=True
 ```
 
 ### 导出 ONNX
@@ -210,6 +211,8 @@ conda activate label
 - 导出路径
 - 产物列表
 - 已知问题
+
+工作记录与说明文档应保存到 `shen_docs/` 目录，而非 `docs/`。
 
 ## 🚫 禁止事项
 - 不要把“训练成功”误认为“可部署成功”

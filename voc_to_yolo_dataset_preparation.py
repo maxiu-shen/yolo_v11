@@ -103,8 +103,8 @@ class_list = ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle',
 class_map = generate_class_map(class_list)
 
 # Set input and output directories
-voc_dir = r"VOCdevkit/VOC2007"
-output_dir = r"VOCdevkit"
+voc_dir = r"datasets/VOCdevkit/VOC2007"
+output_dir = r"datasets/VOCdevkit"
 
 # Set dataset split ratios
 train_ratio = 0.7  # Adjust as needed

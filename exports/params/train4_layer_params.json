@@ -102,7 +102,7 @@
       ],
       "output_scale": 0.8753657341003418,
       "output_zp": 0,
-      "requant_unified": 0.0009268241207257809,
+      "requant_unified": 0.0018430922602652197,
       "has_absorbed_weight": true,
       "bias_size": 16,
       "bias_scale": 0.0007166098221205175
@@ -214,7 +214,7 @@
       ],
       "output_scale": 1.4484745264053345,
       "output_zp": 0,
-      "requant_unified": 0.00371296001459277,
+      "requant_unified": 0.006785632497540625,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.003393665188923478
@@ -326,7 +326,7 @@
       ],
       "output_scale": 0.7438270449638367,
       "output_zp": 0,
-      "requant_unified": 0.009471429410053061,
+      "requant_unified": 0.01815284782487083,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.004614675883203745
@@ -390,7 +390,7 @@
       ],
       "output_scale": 0.16766083240509033,
       "output_zp": 0,
-      "requant_unified": 0.0042603825147777006,
+      "requant_unified": 0.006251625223263688,
       "has_absorbed_weight": true,
       "bias_size": 8,
       "bias_scale": 0.0005675373249687254
@@ -470,7 +470,7 @@
       ],
       "output_scale": 0.5332692861557007,
       "output_zp": 0,
-      "requant_unified": 0.003557351377555148,
+      "requant_unified": 0.005926349366882597,
       "has_absorbed_weight": true,
       "bias_size": 16,
       "bias_scale": 0.001620499067939818
@@ -646,7 +646,7 @@
       ],
       "output_scale": 0.4900789260864258,
       "output_zp": 0,
-      "requant_unified": 0.0037474798710892833,
+      "requant_unified": 0.008338570975039646,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0006801260751672089
@@ -822,7 +822,7 @@
       ],
       "output_scale": 0.16775430738925934,
       "output_zp": 0,
-      "requant_unified": 0.001793812408839155,
+      "requant_unified": 0.007257487766816644,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00018083934264723212
@@ -998,7 +998,7 @@
       ],
       "output_scale": 0.11170779168605804,
       "output_zp": 0,
-      "requant_unified": 0.003896627648946037,
+      "requant_unified": 0.009218133733835919,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.000284201669273898
@@ -1078,7 +1078,7 @@
       ],
       "output_scale": 0.048036832362413406,
       "output_zp": 0,
-      "requant_unified": 0.004239403237733765,
+      "requant_unified": 0.006731399175592377,
       "has_absorbed_weight": true,
       "bias_size": 16,
       "bias_scale": 0.0001592556363902986
@@ -1190,7 +1190,7 @@
       ],
       "output_scale": 0.07293274998664856,
       "output_zp": 0,
-      "requant_unified": 0.002875165457298522,
+      "requant_unified": 0.006481668773690191,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.00021691173606086522
@@ -1494,7 +1494,7 @@
       ],
       "output_scale": 0.10012836009263992,
       "output_zp": 0,
-      "requant_unified": 0.0025686456578233553,
+      "requant_unified": 0.006900001115539539,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00020183112064842135
@@ -1798,7 +1798,7 @@
       ],
       "output_scale": 0.08660384267568588,
       "output_zp": 0,
-      "requant_unified": 0.001856613923715483,
+      "requant_unified": 0.0038401729627473634,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00015283661196008325
@@ -2102,7 +2102,7 @@
       ],
       "output_scale": 0.13823512196540833,
       "output_zp": 0,
-      "requant_unified": 0.002762309111589843,
+      "requant_unified": 0.006159788937118933,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0004323143803048879
@@ -2214,7 +2214,7 @@
       ],
       "output_scale": 0.05595063045620918,
       "output_zp": 0,
-      "requant_unified": 0.005143649288637641,
+      "requant_unified": 0.00702331140658598,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.00032683491008356214
@@ -2326,7 +2326,7 @@
       ],
       "output_scale": 0.1196097806096077,
       "output_zp": 0,
-      "requant_unified": 0.006474777337966879,
+      "requant_unified": 0.014005245986739854,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.0006743176490999758
@@ -2438,7 +2438,7 @@
       ],
       "output_scale": 0.0765133872628212,
       "output_zp": 0,
-      "requant_unified": 0.0023931892422217747,
+      "requant_unified": 0.004181198524645492,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.00022918079048395157
@@ -2550,7 +2550,7 @@
       ],
       "output_scale": 0.10520420223474503,
       "output_zp": 0,
-      "requant_unified": 0.0021737440839629534,
+      "requant_unified": 0.003864552524337474,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.00013922053040005267
@@ -2662,7 +2662,7 @@
       ],
       "output_scale": 0.09484481066465378,
       "output_zp": 0,
-      "requant_unified": 0.002252100323868548,
+      "requant_unified": 0.00403856817239189,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.00017468348960392177
@@ -2774,7 +2774,7 @@
       ],
       "output_scale": 0.14222556352615356,
       "output_zp": 0,
-      "requant_unified": 0.00234674962444273,
+      "requant_unified": 0.004307140767909028,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.0003648416604846716
@@ -2950,7 +2950,7 @@
       ],
       "output_scale": 0.09810186922550201,
       "output_zp": 0,
-      "requant_unified": 0.004177287199573291,
+      "requant_unified": 0.007532301893296592,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0004318529972806573
@@ -3254,7 +3254,7 @@
       ],
       "output_scale": 0.09431566298007965,
       "output_zp": 0,
-      "requant_unified": 0.0030048811079931717,
+      "requant_unified": 0.007273193954492159,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00046045868657529354
@@ -3814,7 +3814,7 @@
       ],
       "output_scale": 0.12709762156009674,
       "output_zp": 0,
-      "requant_unified": 0.0010878187109608197,
+      "requant_unified": 0.002671736193576954,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.0003097600128967315
@@ -4374,7 +4374,7 @@
       ],
       "output_scale": 0.14123576879501343,
       "output_zp": 0,
-      "requant_unified": 0.0035547910242923124,
+      "requant_unified": 0.008892492278285547,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.0007041740464046597
@@ -4550,7 +4550,7 @@
       ],
       "output_scale": 0.10873367637395859,
       "output_zp": 0,
-      "requant_unified": 0.0035386697402973407,
+      "requant_unified": 0.006472358182462032,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00042352057062089443
@@ -4726,7 +4726,7 @@
       ],
       "output_scale": 0.16704681515693665,
       "output_zp": 0,
-      "requant_unified": 0.0042762687587097606,
+      "requant_unified": 0.005914577164722183,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0008812322630546987
@@ -4902,7 +4902,7 @@
       ],
       "output_scale": 0.1461096704006195,
       "output_zp": 0,
-      "requant_unified": 0.0020021868124873595,
+      "requant_unified": 0.0058935099529841255,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00019076991884503514
@@ -5078,7 +5078,7 @@
       ],
       "output_scale": 0.1760425865650177,
       "output_zp": 0,
-      "requant_unified": 0.0017718141162023733,
+      "requant_unified": 0.004500279439175582,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00025532470317557454
@@ -5254,7 +5254,7 @@
       ],
       "output_scale": 0.11293347924947739,
       "output_zp": 0,
-      "requant_unified": 0.0023072215909034723,
+      "requant_unified": 0.005099687738298363,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00022591966262552887
@@ -5430,7 +5430,7 @@
       ],
       "output_scale": 0.17427165806293488,
       "output_zp": 0,
-      "requant_unified": 0.001326419294226316,
+      "requant_unified": 0.003516543139608889,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00018846213060896844
@@ -5734,7 +5734,7 @@
       ],
       "output_scale": 0.09772185236215591,
       "output_zp": 0,
-      "requant_unified": 0.004411682490835672,
+      "requant_unified": 0.014369166223621017,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0003849211789201945
@@ -6294,7 +6294,7 @@
       ],
       "output_scale": 0.11921249330043793,
       "output_zp": 0,
-      "requant_unified": 0.002412087157051583,
+      "requant_unified": 0.008423118464101405,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.0002484301512595266
@@ -6598,7 +6598,7 @@
       ],
       "output_scale": 0.08006536960601807,
       "output_zp": 0,
-      "requant_unified": 0.0018537625114378787,
+      "requant_unified": 0.005727510153342159,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0001342601899523288
@@ -7158,7 +7158,7 @@
       ],
       "output_scale": 0.07998951524496078,
       "output_zp": 0,
-      "requant_unified": 0.001102693057485128,
+      "requant_unified": 0.005383810787165111,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.00011625916522461921
@@ -7718,7 +7718,7 @@
       ],
       "output_scale": 0.12814129889011383,
       "output_zp": 0,
-      "requant_unified": 0.0036463541644569334,
+      "requant_unified": 0.012971597635178665,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.00037594157038256526
@@ -8278,7 +8278,7 @@
       ],
       "output_scale": 0.09128069877624512,
       "output_zp": 0,
-      "requant_unified": 0.008686986043237144,
+      "requant_unified": 1.3698337703958898,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.00015722773969173431
@@ -8598,7 +8598,7 @@
       ],
       "output_scale": 0.07080564647912979,
       "output_zp": 0,
-      "requant_unified": 0.008748401592703665,
+      "requant_unified": 0.051169982010606824,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0002757294860202819
@@ -8918,7 +8918,7 @@
       ],
       "output_scale": 0.05410642549395561,
       "output_zp": 0,
-      "requant_unified": 0.0018583856413661292,
+      "requant_unified": 0.007913718324368985,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 8.037743100430816e-05
@@ -9478,7 +9478,7 @@
       ],
       "output_scale": 0.07421748340129852,
       "output_zp": 0,
-      "requant_unified": 0.0021630199479974153,
+      "requant_unified": 0.004916450349419741,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.00017962655692826957
@@ -9782,7 +9782,7 @@
       ],
       "output_scale": 0.11988083273172379,
       "output_zp": 0,
-      "requant_unified": 0.0028935907409201184,
+      "requant_unified": 0.015430737631649373,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00028539096820168197
@@ -10342,7 +10342,7 @@
       ],
       "output_scale": 0.17122304439544678,
       "output_zp": 0,
-      "requant_unified": 0.0009778097384349317,
+      "requant_unified": 0.002894578102504647,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.0004933846066705883
@@ -10646,7 +10646,7 @@
       ],
       "output_scale": 0.09910465031862259,
       "output_zp": 0,
-      "requant_unified": 0.00538999465204157,
+      "requant_unified": 0.013091157567074596,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00045185707858763635
@@ -10758,7 +10758,7 @@
       ],
       "output_scale": 0.1233748346567154,
       "output_zp": 0,
-      "requant_unified": 0.0028049993309597738,
+      "requant_unified": 0.004948086596779248,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.0003048612561542541
@@ -10934,7 +10934,7 @@
       ],
       "output_scale": 0.13447564840316772,
       "output_zp": 0,
-      "requant_unified": 0.0025808397243988726,
+      "requant_unified": 0.004354401672073106,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00038179210969246924
@@ -11238,7 +11238,7 @@
       ],
       "output_scale": 0.12377313524484634,
       "output_zp": 0,
-      "requant_unified": 0.0019976617730350812,
+      "requant_unified": 0.008758045465237249,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0002646975626703352
@@ -11414,7 +11414,7 @@
       ],
       "output_scale": 0.10481353849172592,
       "output_zp": 0,
-      "requant_unified": 0.0035499571616833866,
+      "requant_unified": 0.0081511286701006,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0005887341685593128
@@ -11494,7 +11494,7 @@
       ],
       "output_scale": 0.08032587170600891,
       "output_zp": 0,
-      "requant_unified": 0.003749060222457695,
+      "requant_unified": 0.006413595325932218,
       "has_absorbed_weight": true,
       "bias_size": 16,
       "bias_scale": 0.00025900854961946607
@@ -11606,7 +11606,7 @@
       ],
       "output_scale": 0.09263714402914047,
       "output_zp": 0,
-      "requant_unified": 0.0032922633749993433,
+      "requant_unified": 0.004724609536409548,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.0002919022517744452
@@ -11782,7 +11782,7 @@
       ],
       "output_scale": 0.12081750482320786,
       "output_zp": 0,
-      "requant_unified": 0.0034460601959531885,
+      "requant_unified": 0.007655795929302317,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0005228508380241692
@@ -11958,7 +11958,7 @@
       ],
       "output_scale": 0.09912650287151337,
       "output_zp": 0,
-      "requant_unified": 0.0022492562947984923,
+      "requant_unified": 0.004770672046537696,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.000178815025719814
@@ -12507,7 +12507,7 @@
       ],
       "output_scale": 0.11482749879360199,
       "output_zp": 0,
-      "requant_unified": 0.00413032255503723,
+      "requant_unified": 0.01140546178733567,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0004929620772600174
@@ -12654,7 +12654,7 @@
       ],
       "output_scale": 0.09556187689304352,
       "output_zp": 0,
-      "requant_unified": 0.004767378114065366,
+      "requant_unified": 0.008010338385643865,
       "has_absorbed_weight": true,
       "bias_size": 32,
       "bias_scale": 0.0004163483972661197
@@ -12830,7 +12830,7 @@
       ],
       "output_scale": 0.19119836390018463,
       "output_zp": 0,
-      "requant_unified": 0.003018455033112811,
+      "requant_unified": 0.007955126963078558,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00021020049462094903
@@ -13134,7 +13134,7 @@
       ],
       "output_scale": 0.12536494433879852,
       "output_zp": 0,
-      "requant_unified": 0.0035244347406221312,
+      "requant_unified": 0.010904036626625415,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00038446832331828773
@@ -13438,7 +13438,7 @@
       ],
       "output_scale": 0.10287605971097946,
       "output_zp": 0,
-      "requant_unified": 0.003647606227748709,
+      "requant_unified": 0.01000372067833951,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.00028529902920126915
@@ -14243,7 +14243,7 @@
       ],
       "output_scale": 0.1438596099615097,
       "output_zp": 0,
-      "requant_unified": 0.004313794802997221,
+      "requant_unified": 0.009344691113371792,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.0003989599063061178
@@ -14454,7 +14454,7 @@
       ],
       "output_scale": 0.08241823315620422,
       "output_zp": 0,
-      "requant_unified": 0.0030291942033960476,
+      "requant_unified": 0.005443091671195893,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0001991541648749262
@@ -14630,7 +14630,7 @@
       ],
       "output_scale": 0.15203619003295898,
       "output_zp": 0,
-      "requant_unified": 0.004243375683360635,
+      "requant_unified": 0.007352389584128444,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0010119449580088258
@@ -14806,7 +14806,7 @@
       ],
       "output_scale": 0.10572366416454315,
       "output_zp": 0,
-      "requant_unified": 0.003446440755218075,
+      "requant_unified": 0.005876603495632516,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0004117019416298717
@@ -14982,7 +14982,7 @@
       ],
       "output_scale": 0.11028581112623215,
       "output_zp": 0,
-      "requant_unified": 0.0021923683788938712,
+      "requant_unified": 0.004230120349539985,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00022590432490687817
@@ -15158,7 +15158,7 @@
       ],
       "output_scale": 0.09202783554792404,
       "output_zp": 0,
-      "requant_unified": 0.0019474484152794051,
+      "requant_unified": 0.005178552783497108,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.00016114198660943657
@@ -15334,7 +15334,7 @@
       ],
       "output_scale": 0.23570111393928528,
       "output_zp": 0,
-      "requant_unified": 0.0015680951975910106,
+      "requant_unified": 0.003592553120095957,
       "has_absorbed_weight": true,
       "bias_size": 64,
       "bias_scale": 0.0004064974782522768
@@ -15638,7 +15638,7 @@
       ],
       "output_scale": 0.1822979599237442,
       "output_zp": 0,
-      "requant_unified": 0.0033740014759686375,
+      "requant_unified": 0.00867312394915411,
       "has_absorbed_weight": true,
       "bias_size": 128,
       "bias_scale": 0.0002887563896365464
@@ -16198,7 +16198,7 @@
       ],
       "output_scale": 0.17717744410037994,
       "output_zp": 0,
-      "requant_unified": 0.002371311508319096,
+      "requant_unified": 0.006619827056864716,
       "has_absorbed_weight": true,
       "bias_size": 256,
       "bias_scale": 0.000719458214007318

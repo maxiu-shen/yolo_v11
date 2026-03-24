@@ -1,7 +1,7 @@
 <annotation>
 	<folder>JPEGImages</folder>
 	<filename>000002.jpg</filename>
-	<path>D:\yolo\yolo_v11\VOCdevkit\VOC2007\JPEGImages\000002.jpg</path>
+	<path>D:\yolo\yolo_v11\datasets\VOCdevkit\VOC2007\JPEGImages\000002.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -24,3 +24,4 @@
 		</bndbox>
 	</object>
 </annotation>
+

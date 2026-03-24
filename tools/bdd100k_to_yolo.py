@@ -45,23 +45,30 @@ CATEGORY_ALIASES: dict[str, str] = {
     "motor": "motorcycle",
 }
 
-JSON_FILES: dict[str, Path] = {
-    "train": Path(
-        r"datasets/BDD100K/raw/iic/BDD100K/master/data_files/extracted"
-        r"/0901178fbfdcdf40ad6840a530ab611e633b3edc3b29a2bc7f16479be17a3c49"
-        r"/train/annotations/bdd100k_labels_images_train.json"
-    ),
-    "val": Path(
-        r"datasets/BDD100K/raw/iic/BDD100K/master/data_files/extracted"
-        r"/58d3c2e131bde12560fe8ca8a895abaf13b8f1bb7ebcff9e796360e29b66b1b9"
-        r"/val/annotations/bdd100k_labels_images_val.json"
-    ),
-}
+DEFAULT_RAW_ROOT = Path(__file__).resolve().parents[1] / "datasets" / "BDD100K" / "raw"
+
+
+def find_json_files(raw_root: Path) -> dict[str, Path]:
+    """Discover bdd100k_labels_images_train.json and _val.json under raw_root (any depth)."""
+    found: dict[str, Path] = {}
+    for name in ("bdd100k_labels_images_train.json", "bdd100k_labels_images_val.json"):
+        split = "train" if "train" in name else "val"
+        for p in raw_root.rglob(name):
+            if p.is_file():
+                found[split] = p
+                break
+    return found
 
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="BDD100K JSON -> YOLO txt converter")
     p.add_argument("--output-root", type=Path, default=Path("datasets/BDD100K/labels"))
+    p.add_argument(
+        "--raw-root",
+        type=Path,
+        default=None,
+        help="Root of BDD100K raw data (e.g. datasets/BDD100K/raw). Script will search for bdd100k_labels_images_*.json under it.",
+    )
     p.add_argument("--splits", nargs="+", default=["train", "val"],
                    choices=["train", "val"])
     return p.parse_args()
@@ -165,23 +172,29 @@ def write_classes_file(output_root: Path) -> None:
 
 def main() -> None:
     args = parse_args()
-    output_root: Path = args.output_root
+    output_root: Path = args.output_root.resolve()
+    raw_root: Path = (args.raw_root or DEFAULT_RAW_ROOT).resolve()
 
-    print(f"Output root: {output_root.resolve()}")
+    json_files = find_json_files(raw_root)
+    for split in args.splits:
+        if split not in json_files:
+            print(f"ERROR: bdd100k_labels_images_{split}.json not found under {raw_root}", file=sys.stderr)
+            sys.exit(1)
+
+    print(f"Raw root:   {raw_root}")
+    print(f"Output root: {output_root}")
     print(f"Splits: {args.splits}")
     print(f"Image size: {IMG_W}x{IMG_H}")
     print(f"Classes ({len(YOLO_CLASSES)}): {YOLO_CLASSES}")
     print(f"Aliases: {CATEGORY_ALIASES}")
+    for s in args.splits:
+        print(f"  JSON[{s}]: {json_files[s]}")
     print()
 
     write_classes_file(output_root)
 
     for split in args.splits:
-        jp = JSON_FILES[split]
-        if not jp.exists():
-            print(f"ERROR: {jp} not found, skipping {split}", file=sys.stderr)
-            continue
-
+        jp = json_files[split]
         print(f"Converting {split}:")
         out_dir = output_root / split
         stats = convert_split(jp, out_dir)
