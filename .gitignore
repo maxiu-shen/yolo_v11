@@ -1,4 +1,4 @@
-# 数据集（体积过大，不纳入版本控制）
+# 数据集（体积过大，不纳入版本控制；在目标机器上按 shen_docs/bdd100k_dataset_setup_guide.md 重建）
 datasets/
 
 # Python 字节码缓存
